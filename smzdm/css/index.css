@@ -1747,6 +1747,7 @@ a {
 
 /*------------------------右侧边栏css 90------------------------*/
 #elevator {
+    position:fixed;
     top: 155px;/*左侧框到页面顶端的距离*/
     z-index: 999;/*设置的值越大可以保证该部分始终位于页面的最上层，不会被任何部分遮住*/
     right:0;/*定位*/
@@ -1836,14 +1837,14 @@ a {
 #elevator .elevator-blank {
     margin-bottom: 9px;
 }
-#elevator li.back-top.show {
+/*#elevator li.back-top.show {
     opacity: 1;
 }
 #elevator li.back-top {
-    opacity: 0; /*隐藏该图标*/
-    /*-webkit-transition: all .2s;*/
+    opacity: 0; 隐藏该图标
+    -webkit-transition: all .2s;
     transition: all .2s; 
-}
+}*/
 #elevator .arrow-up {
     font-size: 22px;
     font-weight: 600;

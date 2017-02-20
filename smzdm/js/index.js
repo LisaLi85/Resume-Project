@@ -1,11 +1,7 @@
-// $(document).ready(function(){
-// 	$('.elevator>li').on('mouseover',function(){
-// 		$(this).find('.elevator-info').show();
-// 	}).on('mouseout',function(){
-// 		$this.find('.elevator-info').hide();
-// 	})
-// })
-
+//右侧栏回到顶部
+$('.back-top').click(function(){
+    $('body').animate({scrollTop:0});
+}) 
 
 
 // nav导航条stickup
