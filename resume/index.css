@@ -1,0 +1,169 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:"Microsoft YaHei",sans-serif;
+}
+li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+.box{
+	overflow: hidden;
+}
+.twoCnt img,.threeCnt img{
+	width:350px;
+	height:250px;
+}
+.list{
+	height:100%;
+	transition: 0.5s;
+}
+ul>.view{
+	position:relative;
+	background:rgba(162,150,23,1);
+	height:100%;
+}
+.center{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.oneCnt{
+	text-align: center;
+}
+.oneCnt>img{
+	width:120px;
+	height:120px;
+	border-radius:50%;
+	/*border:5px solid #6cc;*/
+}
+.oneCnt>h2{
+	font-size:35px;
+	margin-top:10px;
+	color:#fff;
+}
+.oneCnt>p{
+	font-size:25px;
+	color:#fff;
+	margin-top:10px;
+}
+.twoCnt h1,.threeCnt h1{
+	text-align: center;
+	margin-bottom:50px;
+	color:#fff;
+}
+.twoCnt .c,.threeCnt .c{
+	width:950px;
+	display:flex;
+}
+.twoCnt a,.threeCnt a{
+	font-size:17px;
+	padding:5px;
+	margin-left:10px;
+	background:rgb(55,221,196);
+}
+
+.twoCnt .b,.threeCnt .b{
+	position: relative;
+	margin-left:50px;
+	width:500px;
+	height:250px;
+	border:1px solid black;
+}
+.c p{
+	position:absolute;
+	font-size:18px;
+	top:8px;
+	left:110px;
+	color:#fff;
+}
+
+.c ul{
+	margin-left:50px;
+}
+.c li{
+	width:500px;
+	margin-bottom:70px;
+	position:relative;
+}
+.skill h1,.tree h1{
+	text-align: center;
+	font-size:30px;
+	color:#fff;
+}
+.skill img{
+	width:50px;
+	height:50px;
+    border-radius: 50%;
+
+}
+.skill>ul{
+	display:flex;
+}
+.skill>ul>li{
+	position:relative;
+	width:400px;
+	height:200px;
+	margin:20px;
+}
+.skill h3{
+	position: absolute;
+	font-size:25px;
+	top:0;
+	left:70px;
+	opacity:0.5;
+	transition:0.3s;
+
+}
+.skill a{
+	color:#000;
+
+}
+.skill h3:hover{
+	opacity:1;
+}
+.skill p{
+	position: absolute;
+	font-size:18px;
+	top:30px;
+	left:70px;
+	opacity:0.5;
+}
+.tree{
+	font-size:20px;
+	color:#fff;
+}
+.tree>ul>li{
+	margin-top:20px;
+}
+
+
+.nav{
+	position:fixed;
+	top:50%;
+	right:50px;
+	transform:translate(0,-50%);
+
+}
+.nav>li{
+	width:20px;
+	height:20px;
+	border-radius: 100%;
+	margin-top:30px;
+	background:#bbb;
+	cursor:pointer;
+}
+.six a{
+	position:absolute;
+	font-size:30px;
+	color:#fff;
+	top:60%;
+	left:50%;
+	transform:translate(-50%,0);
+}
+
+
+
