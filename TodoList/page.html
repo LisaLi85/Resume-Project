@@ -1,0 +1,193 @@
+<html>
+  <head>
+    <meta charset=utf-8>
+    <style type="text/css">
+      *{
+        padding: 0;
+        margin:0;
+        box-sizing: border-box;
+      }
+      body{
+        background:#f7f2f1;
+      }
+      [v-cloak]{
+        display: none;
+      }
+      .clearfix:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      #app{
+        width:600px;
+        padding-top:40px;
+        margin:0 auto;
+      }
+      section#signInAndSignUp {
+        border-radius: 10px;
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #d3d3d3;
+        font-size: 24px;
+        color: #625e5b;
+        font-weight: 700;
+        box-shadow: 1px 1px 1px 1px rgba(48,48,48,.77);
+      }
+      section#signInAndSignUp .ct {
+        border-bottom: 1px solid #fff;
+      }
+      section#signInAndSignUp label {
+        display: inline-block;
+        width: 200px;
+        float: left;
+        text-align: center;
+        height: 60px;
+        line-height:60px;
+        border-right: 1px solid #fff;
+      }
+      section#signInAndSignUp input[type=radio] {
+        display: none; /*将前面的圆圈选项去掉*/
+      }
+      .signUp,.login{
+        padding:60px 50px;
+      }
+      .formRow input{
+        height: 50px;
+        width:300px;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      .formRow input:focus{
+        outline: none;/*选中输入框的时候，输入框边线不会被选中变色*/
+      }
+      .usernameInfo{
+        border: 1px solid #ccc;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+      }
+      .userpassword{
+        border: 1px solid #ccc;
+        border-radius: 0 0 5px 5px;
+      }
+      .formActions input{
+        margin-top: 30px;
+        height: 40px;
+        width: 300px;
+        border: none;
+        border-radius: 5px;
+        color:#fff;
+        font-size: 24px;
+      }
+      .btnRegister{
+        background: #42c02e;
+      }
+      .btnLogin{
+        background-color:#3da2f3;
+      }
+      .logout{
+        float: right;
+        padding:5px;
+        margin-bottom: 20px;
+        border-style: none;
+        border-radius: 3px;
+        color: #fff;
+        background-color: #EA6F5A;
+        cursor: pointer;
+      }
+      .newTask input{
+        width: 600px;
+        height:50px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        border: 1px solid #ccc;
+        box-shadow:8px 8px 5px #ccc; 
+      }
+      .todos li{
+        margin:20px 22px;
+        height: 30px;
+        line-height: 30px;
+      }
+      .creatAt{
+        color:gray;
+        margin-left:20px;
+      }
+      .btn{
+        float: right;
+        color:#fff;
+        border: none;
+        padding: 3px;
+        /*border-style: none;*/
+        cursor: pointer;
+        background: orange;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <!-- <h1>todos</h1> -->
+    <div id="app" v-cloak>
+      <section id="signInAndSignUp" v-if="!currentUser">
+        <div class="ct clearfix">
+          <label><input type="radio" name="type" v-model="actionType" value="signUp">注册</label>
+          <label><input type="radio" name="type" v-model="actionType" value="login">登录</label>
+        </div>
+        <div class="signUp" v-if="actionType=='signUp'">
+          <form @submit.prevent=signUp>
+            <div class="formRow">
+              <input class="usernameInfo" type="text" v-model="formData.username" placeholder="请输入用户名">
+            </div>
+            <div class="formRow">
+              <input class="userpassword" type="password" v-model="formData.password" placeholder="请输入密码">
+            </div>
+            <div class="formActions">
+              <input class="btnRegister" type="submit" value="注册">
+            </div>
+          </form>
+        </div>
+        <div class="login" v-if="actionType=='login'">
+          <form @submit.prevent=login>
+            <div class="formRow">
+              <input class="usernameInfo" type="text" v-model="formData.username" placeholder="请输入用户名">
+            </div>
+            <div class="formRow">
+              <input class="userpassword" type="password" v-model="formData.password" placeholder="请输入密码">
+            </div>
+            <div class="formActions">
+              <input class="btnLogin" type="submit" value="登录">
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="todo" v-if="currentUser">
+        <p class="curuser">
+          <!-- 你好：{{this.formData.username}} 用这个的话，当页面刷新的时候，用户名就不见了 -->
+          <p>你好：{{currentUser.username}}</p>
+          <button class="logout" @click="logout">退出登录</button>
+        </p>
+        <div class="newTask">
+          <input type="text" v-model="newTodo" @keypress.enter="addTodo" placeholder="Add a todo">
+        </div>
+        <ol class="todos">
+          <li v-for="todo in todoList">
+            <input type="checkbox" v-model="todo.done" @click="finish(todo)">{{todo.title}}
+
+            <span v-if="todo.done" style="color:red">已完成</span>
+            <span v-else style="color:blue">未完成</span>
+            <span class="creatAt">创建时间:{{todo.createdAt}}</span>
+
+            <button @click="removeTodo(todo)" class="btn">删除该项</button> <!-- 👈 加了一个按钮 -->
+          </li>
+        </ol>        
+      </section>
+
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
