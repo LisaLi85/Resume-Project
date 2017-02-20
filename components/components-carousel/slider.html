@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>无线轮播二次封装</title>
+<style type="text/css">
+html,body,ul,li{
+	margin:0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.carousel{
+	position: relative;
+	width: 310px;
+	height: 206px;
+	overflow: hidden;
+}
+.carousel .img-ct{
+	position: relative;
+}
+.carousel .img-ct a{
+	display: inline-block;
+}
+.carousel .img-ct img{
+	width: 310px;
+	height: 206px;
+}
+.carousel .img-ct:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.carousel .img-ct li{
+	float: left;
+}
+.carousel .arrow{
+	position: absolute;
+	top: 50%;
+	margin-top: -15px; /*垂直居中*/
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #444;
+	color: #fff;
+	border-radius: 30px;
+	box-shadow: 0 0 2px #888;
+	opacity: 0.7;
+}
+.carousel .arrow:hover{
+	opacity: 1;
+}
+.carousel .pre{
+	left: 10px;
+}
+.carousel .next{
+	right: 10px;
+}
+.carousel .bullet{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%); /*水平偏移，使其水平居中*/
+}
+.carousel .bullet li{
+	width: 16px;
+	height: 4px;
+	border-radius: 2px;
+	background: #fff;
+	display: inline-block;
+	cursor: pointer;
+}
+.carousel .bullet li.active{
+	background: #666;
+}
+
+</style>
+</head>
+<body>
+<div class="carousel">
+	<ul class="img-ct">
+		<li data-id='0'><a href="#"><img src="img/pic1.jpg"></a></li>
+		<li data-id='1'><a href="#"><img src="img/pic2.jpg"></a></li>
+		<li data-id='2'><a href="#"><img src="img/pic3.jpg"></a></li>
+		<li data-id='3'><a href="#"><img src="img/pic4.jpg"></a></li>
+	</ul>
+	<a href="#" class="pre arrow"><</a>
+	<a href="#" class="next arrow">></a>
+	<ul class="bullet">
+		<li class="active"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<div class="carousel">
+	<ul class="img-ct">
+		<li data-id='0'><a href="#"><img src="img/pic1.jpg"></a></li>
+		<li data-id='1'><a href="#"><img src="img/pic2.jpg"></a></li>
+		<li data-id='2'><a href="#"><img src="img/pic3.jpg"></a></li>
+		<li data-id='3'><a href="#"><img src="img/pic4.jpg"></a></li>
+	</ul>
+	<a href="#" class="pre arrow"><</a>
+	<a href="#" class="next arrow">></a>
+	<ul class="bullet">
+		<li class="active"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<!-- _item_container, _pre, _next, _item_bullet,_autoPlay -->
+<!-- '.imgc-ct','.pre','.next','.bullet','notAutoPlay' -->
+
+<script src="jquery.min.js"></script>
+<script src="components-slider.js"></script>
+<script type="text/javascript">
+	Carousel.init($('.carousel').eq(0),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');
+	Carousel.init($('.carousel').eq(1),'.img-ct','.pre','.next','.bullet','autoPlay');
+</script>
+</body>
+</html>
