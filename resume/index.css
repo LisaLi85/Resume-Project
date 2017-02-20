@@ -34,11 +34,10 @@ ul>.view{
 .oneCnt{
 	text-align: center;
 }
-.oneCnt>img{
-	width:120px;
-	height:120px;
-	border-radius:50%;
-	/*border:5px solid #6cc;*/
+.oneCnt>h1{
+	font-size: 55px;
+	color: #fff;
+	margin-bottom:60px;
 }
 .oneCnt>h2{
 	font-size:35px;
@@ -62,8 +61,9 @@ ul>.view{
 .twoCnt a,.threeCnt a{
 	font-size:17px;
 	padding:5px;
+	color:#eee;
 	margin-left:10px;
-	background:rgb(55,221,196);
+	background:rgb(147, 160, 17);
 }
 
 .twoCnt .b,.threeCnt .b{
@@ -89,27 +89,27 @@ ul>.view{
 	margin-bottom:70px;
 	position:relative;
 }
-.skill h1,.tree h1{
+.project h1,.skills h1, .tree h1{
 	text-align: center;
 	font-size:30px;
 	color:#fff;
 }
-.skill img{
+.project img{
 	width:50px;
 	height:50px;
     border-radius: 50%;
 
 }
-.skill>ul{
+.project>ul{
 	display:flex;
 }
-.skill>ul>li{
+.project>ul>li{
 	position:relative;
 	width:400px;
 	height:200px;
 	margin:20px;
 }
-.skill h3{
+.project h3{
 	position: absolute;
 	font-size:25px;
 	top:0;
@@ -118,20 +118,66 @@ ul>.view{
 	transition:0.3s;
 
 }
-.skill a{
+.project a{
 	color:#000;
 
 }
-.skill h3:hover{
+.project h3:hover{
 	opacity:1;
 }
-.skill p{
+.project p{
 	position: absolute;
 	font-size:18px;
 	top:30px;
 	left:70px;
 	opacity:0.5;
 }
+.skills h1{
+	margin-bottom: 40px;
+}
+.skills>div>ul>li>p.lan{
+	float: left;
+	line-height: 50px;
+	color: #fff;
+	font-size: 30px;
+	width: 200px;
+	text-align: left;
+}
+.skills>div>ul>li:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.skills>div>ul>li{
+	width: 1100px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.pannel-ct{
+	height: 50px;
+	width: 800px;
+	background-color: rgb(240, 236, 236);
+	margin: 0 auto;
+	float: left;
+}
+.pannel{
+	width: 600px;
+	height: 50px;
+	background-color: #333;
+}
+.html .pannel{
+	width: 650px;
+}
+.css .pannel{
+	width: 600px;
+}
+.js .pannel{
+	width: 550px;
+}
+.jq .pannel{
+	width: 590px;
+}
+
 .tree{
 	font-size:20px;
 	color:#fff;

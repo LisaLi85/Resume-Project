@@ -10,7 +10,7 @@
 		<ul class='list'>
 			<li class="one view">
 				<div class="oneCnt center">	
-				<img src="img/resume.png" alt="">			
+					<h1>个人简历</h1>			
 					<h2>李立丽</h2>
 					<p>WEB前端工程师</p>
 					<p>Email:756543557@qq.com</p>
@@ -19,7 +19,7 @@
 			</li>
 			<li class="two view">
 				<div class="twoCnt center">
-					<h1>待办事项表<a href='https://lisali85.github.io/Resume-Project/TodoList/page.html'>预览</a></h1>
+					<h1>待办事项表<a href='https://lisali85.github.io/Resume-Project/TodoList/page.html' target="_blank">预览</a></h1>
 					<div class="c">
 						<img src="img/todolist.png" alt="">
 						<ul>
@@ -32,7 +32,7 @@
 			</li>
 			<li class="three view">
 				<div class="threeCnt center">
-					<h1>什么值得买首页<a href='https://lisali85.github.io/Resume-Project/smzdm/index.html'>预览</a></h1>
+					<h1>什么值得买首页<a href='https://lisali85.github.io/Resume-Project/smzdm/index.html' target="_blank">预览</a></h1>
 					<div class="c">
 						<img src="img/smzdm.png" alt="">
 						<ul>
@@ -45,28 +45,61 @@
 				</div>
 			</li>
 			<li class="four view">
-				<div class="skill center">
+				<div class="project center">
 					<h1>项目经验</h1>
 					<ul>
 						<li>
-							<img src="img/project.png" alt="">
-							<h3><a href="https://lisali85.github.io/Resume-Project/3D-carousel/index.html">3D轮播</a></h3>
+							<img src="img/p.png" alt="">
+							<h3><a href="https://lisali85.github.io/Resume-Project/3D-carousel/index.html" target="_blank">3D轮播</a></h3>
 							<p>利用CSS3的transform属性来实现3D轮播效果。transform修改元素的变形、旋转、缩放、倾斜特性，通过rotate使元素旋转一定的度数。</p>
 						</li>
 						<li>
-							<img src="img/project.png" alt="">
-							<h3><a href="https://lisali85.github.io/Resume-Project/JD/index.html">京东手机版首页</a></h3>
+							<img src="img/p.png" alt="">
+							<h3><a href="https://lisali85.github.io/Resume-Project/JD/index.html" target="_blank">京东手机版首页</a></h3>
 							<p>使用媒体查询的功能，利用浮动、定位完成页面布局。使用懒加载提高了页面加载效率。</p>
 						</li>
 						<li>
-							<img src="img/project.png" alt="">
-							<h3><a href="https://github.com/LisaLi85/Resume-Project/tree/master/components">组件库</a></h3>
+							<img src="img/p.png" alt="">
+							<h3><a href="https://github.com/LisaLi85/Resume-Project/tree/master/components" target="_blank">组件库</a></h3>
 							<p>使用构造函数进行封装,封装了Tab组件和轮播组件，可以实现同一页面中不同触发类型（onclick或者mouseover)、不同样式的Tab运行和同一页面多个轮播同时运行。</p>
 						</li>
 					</ul>
 				</div>
 			</li>
 			<li class='five view'>
+				<div class="skills center">
+					<div>
+						<h1>擅长技术</h1>
+						<ul>
+							<li class="html">
+								<p class="lan">HTML</p>
+								<div class="pannel-ct">
+									<div class="pannel"></div>
+								</div>
+							</li>
+							<li class="css">
+								<p class="lan">CSS</p>
+								<div class="pannel-ct">
+									<div class="pannel"></div>
+								</div>
+							</li>
+							<li class="js">
+								<p class="lan">Javascript</p>
+								<div class="pannel-ct">
+									<div class="pannel"></div>
+								</div>
+							</li>
+							<li class="jq">
+								<p class="lan">jQuery</p>
+								<div class="pannel-ct">
+									<div class="pannel"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>				
+			</li>
+			<li class='six view'>
 				<div class="tree center">
 					<h1>技能掌握</h1>
 					<ul>
@@ -84,6 +117,7 @@
 		</ul>
 	</div>
 	<ul class="nav">
+		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
@@ -113,7 +147,7 @@
 				navColor(idx)
 				upWheel(idx)	
 			}
-			if(e.wheelDelta<0&&idx<5){
+			if(e.wheelDelta<0&&idx<5){ //控制滚动停止页面
 				navL[idx].style.background='#bbb'
 				idx+=1;
 				navColor(idx)
