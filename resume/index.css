@@ -22,7 +22,7 @@ a{
 }
 ul>.view{
 	position:relative;
-	background:rgba(162,150,23,1);
+	background:#F8A4A4;
 	height:100%;
 }
 .center{
@@ -48,6 +48,36 @@ ul>.view{
 	font-size:25px;
 	color:#fff;
 	margin-top:10px;
+}
+.oneCnt .book{
+    background-color: rgba(158,158,158,1);
+    color: #fff;
+    opacity: 0.5;
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+}
+.oneCnt .github{
+	background-color: #fff;
+    color: #000;
+    opacity: 0.5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+}
+.oneCnt .book i, .oneCnt .github i{
+	font-size: 24px;
+}
+.oneCnt .book:hover, .oneCnt .github:hover{
+	opacity: 1;
 }
 .twoCnt h1,.threeCnt h1{
 	text-align: center;
@@ -81,6 +111,26 @@ ul>.view{
 	color:#fff;
 }
 
+.c .work-left{
+	width:50%;
+
+}
+
+.work-left .work-img{
+    width: 350px;
+    height: 250px;	
+}
+
+.c .work-right{
+	width:50%;
+	
+}
+
+.c .goto-show{
+	margin-top: 30px;
+	text-align:center;	
+}
+
 .c ul{
 	margin-left:50px;
 }
@@ -91,46 +141,82 @@ ul>.view{
 }
 .project h1,.skills h1, .tree h1{
 	text-align: center;
-	font-size:30px;
 	color:#fff;
 }
-.project img{
+/*.project img{
 	width:50px;
 	height:50px;
     border-radius: 50%;
+    padding: 15px;
+	display: block;
+	float: left;
+	margin: 0 50px;
+	line-height: 50px;
 
+}*/
+.project span{
+    color: #fff;
+    font-size: 50px;
+    border-radius: 50%;
+    background-color: rgba(179, 103, 103, 0.5);
+    padding: 15px;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 0 50px;
+    line-height: 50px;
+}
+
+.project span .icon-carousel{
+	padding:6px 6px;
+	font-size:42px;
+}
+.project span .icon-phone{
+	padding:6px 2px;
+	font-size:48px;
+}
+.project span .icon-tab{
+	padding:6px 3px;
+	font-size:48px;
+}
+.project span .icon-resume{
+	padding:6px 6px;
+	font-size:42px;
 }
 .project>ul{
-	display:flex;
+	width: 1200px;
+	margin:40px auto;
+}
+.project>ul:after{
+	content: '';
+	display: block;
+	clear: both;
 }
 .project>ul>li{
-	position:relative;
-	width:400px;
-	height:200px;
-	margin:20px;
+	float: left;
+	width: 600px;
+	text-align: left;
+	margin-bottom: 40px;
+	height: 200px;
 }
 .project h3{
-	position: absolute;
-	font-size:25px;
-	top:0;
-	left:70px;
-	opacity:0.5;
-	transition:0.3s;
-
+	margin-top: 9px;
+	margin-bottom: 9px;
+	opacity: 0.5;
 }
 .project a{
 	color:#000;
-
 }
 .project h3:hover{
 	opacity:1;
 }
 .project p{
-	position: absolute;
-	font-size:18px;
-	top:30px;
-	left:70px;
-	opacity:0.5;
+	font-size: 20px;
+	color:#fff;
+	padding: 3px 0;
+	width: 415px;
+	float: right;
 }
 .skills h1{
 	margin-bottom: 40px;
@@ -142,6 +228,13 @@ ul>.view{
 	font-size: 30px;
 	width: 200px;
 	text-align: left;
+}
+.skills>div>ul>li>p.percentage{
+	float: right;
+	line-height: 50px;
+	color: #fff;
+	font-size: 30px;
+	text-align: right; 
 }
 .skills>div>ul>li:after{
 	content: '';
@@ -211,5 +304,4 @@ ul>.view{
 	transform:translate(-50%,0);
 }
 
-
-
+       
