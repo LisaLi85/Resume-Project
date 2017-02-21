@@ -1,0 +1,246 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,body,ul,li, dl, dt, dd, h1,h2,h3,h4,h5,h6,p { 
+        margin: 0; 
+        padding: 0; 
+      }
+      li { 
+        list-style: none; 
+      }
+      a{
+        text-decoration: none;
+      }
+      body {
+        font: 14px/1.8 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+        background-color: #dedede;
+        color: #333;
+      }
+
+      #wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 65px 45px;
+      }
+
+      .lighter {
+        color: #ccc;
+      }
+
+      section:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      section h2 {
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        width: 40%;
+      }
+      section h3{
+        padding-top: 20px;
+      }
+      section h3 a{
+        color:black;
+        font-weight:bold;
+      }
+      section h3 a:hover{
+        color:red;
+      }
+      section .intro {
+        color: #ccc;
+      }      
+      section .detail {
+        margin-top: 10px;
+      }
+      .personal .name {
+        float: left;
+        width: 50%;
+      }
+      .personal .contacts {
+        float: left;
+        width: 50%;
+      }
+
+      .personal .circle {
+        position: relative;
+        float: left;
+        width: 160px;
+        height: 160px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 50%;
+      }
+      .personal .circle span {
+        position: absolute;
+        font-size: 28px;
+      }
+      .personal .circle span:nth-child(1) {
+        left: 50px;
+        top: 33px;
+      }
+      .personal .circle span:nth-child(2) {
+        right: 50px;
+        bottom: 33px;
+      }
+      .personal .circle:before {
+        content: '';
+        position: absolute;
+        top: 80px;
+        left: 40px;
+        display: inline-block;
+        width: 80px;
+        border-top: 2px solid #fff;
+        transform: rotateZ(140deg);
+      }  
+      .personal .name h1 {
+        font-size: 44px;
+        font-weight: normal;
+        margin-left: 190px;
+      }
+      .personal .name p {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 190px;
+      }
+      .personal .contacts dt {
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 4px solid #333;
+        margin-bottom: 10px;
+      }
+      .personal .contacts strong {
+        margin-right: 10px;
+      }
+      .personal .contacts a{
+        color:#333;
+      }
+      .personal .contacts a:hover{
+        color:red;
+      }
+      .works li,
+      .projects li,
+      .skills li {
+          border-left: 2px solid #333;
+          padding-left: 76px;
+          position: relative;
+          padding-bottom: 20px;
+      }
+
+      .works li:before,
+      .projects li:before,
+      .skills li:before{
+          content: '';
+          position: absolute;
+          left: -5px;
+          display: inline-block;
+          top: 10px;
+          width: 8px;
+          border-radius: 50%;
+          height: 8px;
+          background-color: #333;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--
+    步骤：
+    1. 分析页面(单栏? 双栏? 自适应?)，分块
+    2. 找共同点和特征
+    3. 完善细节
+
+    原则：
+    1. 标签能省则省
+    2. class能省则省
+    3. 选择最简单的实现方式
+    4. 考虑扩展性
+     -->
+    <div id="wrap">
+      <section class="personal">
+        <div class="name">
+          <div class="circle">
+            <span>L</span>
+            <span>L</span>
+          </div>
+          <h1>李立丽</h1>
+          <p>应聘前端工程师</p>
+        </div>
+        <dl class="contacts">
+          <dt>联系方式</dt>
+          <dd><strong>手机</strong>15972143551</dd>
+          <dd><strong>邮箱</strong>756543557@qq.com</dd>
+          <dd><strong>github</strong><a href="https://github.com/LisaLi85" target="_blank">https://github.com/LisaLi85</a>
+          </dd>
+        </dl>
+      </section>
+      <section class="works">
+        <h2>个人作品</h2>
+        <ul>
+          <li>
+            <h3> <a href="https://lisali85.github.io/Resume-Project/smzdm/index.html" target="_blank">仿站: 什么值得买</a>
+             </h3>
+            <div class="detail">
+                  <p><strong>使用技术:</strong>HTML、CSS、jQuery</p>
+                  <p><strong>项目描述:</strong>根据设计稿还原页面。</p>
+                  <p><strong>实现细节:</strong>运用了浮动、定位、负 margin、垂直居中等知识点，
+                    完成页面的整体布局，及各个小块的实现。用原生js实现Tab组件，实现了样式与组件逻辑的分离，有三个小块用到。  用jQuery实现轮播组件，且配合Tab组件一起使用。有三个小块用到。</p>
+            </div>
+          </li>
+          <li>
+            <h3><a href='https://lisali85.github.io/graduation-project/resumer/dist/index.html#/' target="_blank">在线简历</a></h3>
+            <div class="detail">
+              <p><strong>使用技术:</strong>Vue、Webpack、LeanCloud</p>
+              <p><strong>项目描述:</strong>用 Vue.js、Webpack 做一个在线简历编辑工具。</p>
+              <p><strong>实现细节:</strong>通过使用Vue.js、Webpack实现用户填写个人信息 选择主题，预览简历，下载或分享。根据LeanCloud的文档,及其提供的API,实现保存用户的各项信息的功能。在刷新页面或者重新登录后内容不会消失。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="projects">
+        <h2>其他项目经验</h2>
+        <ul>
+          <li>
+            <h3><a href="https://lisali85.github.io/Resume-Project/3D-carousel/index.html" target="_blank">3D轮播</a></h3>
+            <p class="detail">利用CSS3的transform属性来实现3D轮播效果。transform修改元素的变形、旋转、缩放、倾斜特性，通过rotate使元素旋转一定的度数。</p>
+          </li>
+          <li>
+            <h3><a href="https://lisali85.github.io/Resume-Project/JD/index.html" target="_blank">京东手机版首页</a></h3>
+            <p class="detail">使用媒体查询的功能，利用浮动、定位完成页面布局。使用懒加载优化页面加载体验。</p>
+          </li>
+          <li>
+            <h3><a href="https://github.com/LisaLi85/Resume-Project/tree/master/components" target="_blank">组件库</a></h3>
+            <p class="detail">使用构造函数进行封装,封装了Tab组件和轮播组件，可以实现同一页面中不同触发类型（onclick或者mouseover)、不同样式的Tab运行和同一页面多个轮播同时运行。</p>
+          </li>
+          <li>
+            <h3><a href="https://lisali85.github.io/Resume-Project/TodoList/page.html" target="_blank">待办事项表</a></h3>京东手机版首页</a></h3>
+            <p class="detail">通过使用Vue、Webpack实现用户登录、注册以及添加、删除待办事项的功能。根据LeanCloud的文档,及其提供的API,实现保存用户的注册,登录以及待办事项的内容。</p>
+          </li>
+        </ul>
+      </section>
+      <section class="skills">
+        <h2>技能掌握</h2>
+        <ul>
+          <li>1. 掌握 HTML/CSS 的基础知识,掌握盒模型，熟悉常见的布局如圣杯，双飞翼。</li>
+          <li>2. 对代码的规范性、语义化有一定认识,可以写出符合 W3C 规范的页面。</li>
+          <li>3. 熟悉常见效果：瀑布流布局与木桶布局、原生js、事件模型、DOM 操作、ajax、闭包、原型链、
+          函数的作用域、继承等方法.</li>
+          <li>4. 熟练使用 jQuery等主流库，了解一些主流框架如 Vue。 </li>
+          <li>5. 了解 Vue的使用,可以通过Webpack进行简单的配置工作来开始Vue的开发。</li>
+          <li>6. 可以通过git进行简单的提交工作</li>
+          <li>7. 了解 HTML5、CSS3，响应式布局。</li>
+        </ul>
+      </section>      
+    </div>
+  </body>
+</html>
