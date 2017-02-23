@@ -106,7 +106,7 @@ ul>.view{
 .c p{
 	position:absolute;
 	font-size:18px;
-	top:8px;
+	top:5px;
 	left:110px;
 	color:#fff;
 }
@@ -265,10 +265,10 @@ ul>.view{
 	width: 600px;
 }
 .js .pannel{
-	width: 550px;
+	width: 545px;
 }
 .jq .pannel{
-	width: 590px;
+	width: 560px;
 }
 
 .tree{
