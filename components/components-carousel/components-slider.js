@@ -17,7 +17,7 @@
 	// 	autoPlay 自动播放的间隔时间，3秒
 
 var Carousel=(function(){
-	function _Carousel($carousel,_container, _pre, _next, _item_bullet,_autoPlay){
+	function _Carousel($carousel,_container, _pre, _next,_autoPlay, _item_bullet){
 		this.ct=$carousel;
 	    this.init(_container, _pre, _next, _item_bullet);
 	    this.bind();
