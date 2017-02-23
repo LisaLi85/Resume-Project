@@ -5642,14 +5642,14 @@
 // ($carousel,_container, _pre, _next, _item_bullet,_autoPlay)
 	Carousel.init($('.slides').eq(0),'.view','.left','.right','.btn','autoPlay');
 //	Carousel.init($('.slick-track').eq(0),'.slide-yuanchuang','null','null','null','autoPlay');		
-	Carousel.init($('.carousel').eq(0),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');	
+	Carousel.init($('.carousel').eq(0),'.img-ct','.pre','.next','NOT-autoPlay','.bullet');	
 	// Carousel.init($('.carousel').eq(1),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');	
 	// Carousel.init($('.carousel').eq(2),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');	
 	// Carousel.init($('.carousel').eq(3),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');	
 	// Carousel.init($('.carousel').eq(4),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');	
 	// Carousel.init($('.carousel').eq(5),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');	
 	// Carousel.init($('.carousel').eq(6),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');				
-	Carousel.init($('.carousel').eq(7),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');	
+	Carousel.init($('.carousel').eq(7),'.img-ct','.pre','.next','NOT-autoPlay');	
 
 	new Tab(document.querySelectorAll('.floor-content')[0],'mouseover', 'active','.floor-con-tab>ul>li', '.floor-con-ul>.floor-con-main') ; 
 	new Tab(document.querySelectorAll('.floor-content')[1],'mouseover','active','.floor-con-tab>ul>li', '.floor-con-ul>.floor-con-main') ;
@@ -5671,7 +5671,7 @@
 
 		if("inited"!=arrTabGoodPriceInited[i])
 		{
-			Carousel.init($('.carousel').eq(i),'.img-ct','.pre','.next','.bullet','NOT-autoPlay');	
+			Carousel.init($('.carousel').eq(i),'.img-ct','.pre','.next','NOT-autoPlay');	
 			arrTabGoodPriceInited[i] = "inited";			
 		}
 	} 

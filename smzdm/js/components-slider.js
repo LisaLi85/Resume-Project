@@ -1,6 +1,23 @@
 
+// 
+// 轮播组件
+
+// 外部依赖：jQuery v2.1.4
+
+// 参数
+	// 	$carousel,轮播容器
+	// 	_container,轮播项的容器
+	// 	_pre,	前一项的按钮
+	// 	_next,	后一项的按钮
+	// 	_item_bullet, 所有轮播项的示意点
+	// 	_autoPlay,值为'autoPlay'时，自动播放
+
+// 其他说明
+	// 	每一轮播项的示意点,暂时固定为li
+	// 	autoPlay 自动播放的间隔时间，3秒
+
 var Carousel=(function(){
-	function _Carousel($carousel,_container, _pre, _next, _item_bullet,_autoPlay){
+	function _Carousel($carousel,_container, _pre, _next,_autoPlay, _item_bullet){
 		this.ct=$carousel;
 	    this.init(_container, _pre, _next, _item_bullet);
 	    this.bind();
@@ -18,10 +35,6 @@ var Carousel=(function(){
 	    this.$next=this.ct.find(_next);
 	    this.$bullet=this.ct.find(_item_bullet);
 	    this.imgWidth=this.$items.width();
-	    // if(0==this.imgWidth)
-	    // {
-	    // 	this.imgWidth = 830;
-	    // }
 	    this.imgCount=this.$ct.children().size();
 
 	    this.$ct.prepend(this.$items.last().clone());
@@ -94,11 +107,7 @@ var Carousel=(function(){
 	};
 
 	return {
-		// init:function($ct,_container, _pre, _next, _item_bullet,_autoPlay){
-		// 	$ct.each(function(index,node){
-		// 		new _Carousel($(node),_container, _pre, _next, _item_bullet,_autoPlay);
-		// 	});
-		// }
+
 
 		init:function($ct,_container, _pre, _next, _item_bullet,_autoPlay){
 			
