@@ -203,9 +203,47 @@ var app = new Vue({
       // let index=this.todoList.indexOf()
       // this.todoList[index].done=!this.todoList[index].done;
       // this.updateTodos()
-      console.log(todo);
       todo.finish=!todo.finish;
       this.saveOrUpdateTodos()
-    }
+    },
+    clearTodo:function(){
+      this.todoList=[]
+      this.saveOrUpdateTodos()
+    },
+    saveOldList:function(){
+        this.oldList = this.todoList
+    },
+    filterAll:function(){
+        if(this.oldList===undefined){
+            return
+        }
+        else{
+            this.todoList = this.oldList
+        }
+    },
+    filterTodo:function(){
+        this.filterAll()
+        this.saveOldList()
+        let tdList = []
+        for(var i=0;i<this.todoList.length;i++){
+            let result = this.todoList[i]
+            if(result.done===false){
+                tdList.push(result)
+            }
+        }
+        this.todoList = tdList
+    },
+    filterdone:function(){
+        this.filterAll()
+        this.saveOldList()
+        let finList = []
+        for(var i=0;i<this.todoList.length;i++){
+            let result = this.todoList[i]
+            if(result.done===true){
+                finList.push(result)
+            }
+        }
+        this.todoList = finList
+    },
   }
 })

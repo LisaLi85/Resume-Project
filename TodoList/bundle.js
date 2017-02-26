@@ -271,9 +271,46 @@
 	      // let index=this.todoList.indexOf()
 	      // this.todoList[index].done=!this.todoList[index].done;
 	      // this.updateTodos()
-	      console.log(todo);
 	      todo.finish = !todo.finish;
 	      this.saveOrUpdateTodos();
+	    },
+	    clearTodo: function clearTodo() {
+	      this.todoList = [];
+	      this.saveOrUpdateTodos();
+	    },
+	    saveOldList: function saveOldList() {
+	      this.oldList = this.todoList;
+	    },
+	    filterAll: function filterAll() {
+	      if (this.oldList === undefined) {
+	        return;
+	      } else {
+	        this.todoList = this.oldList;
+	      }
+	    },
+	    filterTodo: function filterTodo() {
+	      this.filterAll();
+	      this.saveOldList();
+	      var tdList = [];
+	      for (var i = 0; i < this.todoList.length; i++) {
+	        var result = this.todoList[i];
+	        if (result.done === false) {
+	          tdList.push(result);
+	        }
+	      }
+	      this.todoList = tdList;
+	    },
+	    filterdone: function filterdone() {
+	      this.filterAll();
+	      this.saveOldList();
+	      var finList = [];
+	      for (var i = 0; i < this.todoList.length; i++) {
+	        var result = this.todoList[i];
+	        if (result.done === true) {
+	          finList.push(result);
+	        }
+	      }
+	      this.todoList = finList;
 	    }
 	  }
 	});

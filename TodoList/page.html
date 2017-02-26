@@ -1,11 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
-    <meta charset=utf-8>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <style type="text/css">
       *{
         padding: 0;
         margin:0;
         box-sizing: border-box;
+        list-style: none;
       }
       body{
         background:#f7f2f1;
@@ -18,11 +22,11 @@
         display: block;
         clear: both;
       }
-      #app{
+      /*#app{
         width:600px;
         padding-top:40px;
         margin:0 auto;
-      }
+      }*/
       section#signInAndSignUp {
         border-radius: 10px;
         position: absolute;
@@ -99,30 +103,120 @@
         background-color: #EA6F5A;
         cursor: pointer;
       }
+      #todo{
+        background: #fff;
+      }
+      #todo .userInfo{
+       /* position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: #fff;*/
+        padding:20px 0;
+        overflow: hidden;
+      }
+      #todo .userInfo h1{
+        margin-left: 25px;
+        color:red;
+        font-size: 30px;
+        font-family: '微软雅黑';
+        float: left;
+      }
+      #todo .userInfo span{
+        display: inline-block;
+        float: right;
+        margin-right:40px;
+        margin-top: 5px;
+      }
+      #todo .userInfo button{
+        display: inline-block;
+        float: right;
+        margin-right: 20px;
+      }
+      #todo .aside{
+        float: left;
+        width: 25%;
+        height: 100vh;
+        color: #fff;
+        background: #333;
+        text-align: center;
+      }
+      #todo .aside ul{
+        margin-top: 60px;
+      }
+      #todo .aside ul>li:hover{
+        transition:transform 0.3s;
+        color: #ccc;
+      }
+      #todo .aside ul>li{
+        font-size: 18px;
+        color:#fff;
+        padding:10px 0;
+        cursor: pointer;
+      }
+    /*  #todo .aside ul li i{
+        font-size: 20px;
+        color:#fff;
+        padding:10px 0;
+      }*/
+      #todo .content{
+        width: 75%;
+        float: right;
+        padding: 20px 50px;
+      }
       .newTask input{
-        width: 600px;
-        height:50px;
-        margin-bottom: 20px;
+        width: 300px;
+        height:40px;
         font-size: 24px;
         border: 1px solid #ccc;
-        box-shadow:8px 8px 5px #ccc; 
+        border-radius: 3px;
       }
       .todos li{
         margin:20px 22px;
         height: 30px;
         line-height: 30px;
+        position: relative;
+      }
+      .newTask .add, .todos .inactive{
+        background: #5CC853;
+      }
+      .newTask .delete, .todos .active{
+        background: red;
+      }
+      /*.todos input[type=checkbox]{
+        display: none; 
+      }*/
+      .todos .inactive, .todos .active{
+        width: 60px;
       }
       .creatAt{
         color:gray;
-        margin-left:20px;
+        position: absolute;
+        right: 90px;
+        font-size: 12px;
+        padding-top: 15px;
       }
       .btn{
-        float: right;
+        display: inline-block;
+        text-align: center;
+        width: 80px;
+        height:30px;
+        line-height: 30px;
+        margin-left: 10px;
+        margin-top:;        
         color:#fff;
         border: none;
-        padding: 3px;
-        /*border-style: none;*/
         cursor: pointer;
+        border-radius: 5px;
+      }
+      .todos li .close{
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        height: 30px;
+        width: 50px;
+        line-height: 30px;
         background: orange;
       }
 
@@ -166,25 +260,37 @@
       </section>
 
       <section id="todo" v-if="currentUser">
-        <p class="curuser">
+        <div class="userInfo">
           <!-- 你好：{{this.formData.username}} 用这个的话，当页面刷新的时候，用户名就不见了 -->
-          <p>你好：{{currentUser.username}}</p>
+          <h1>todos</h1>
           <button class="logout" @click="logout">退出登录</button>
-        </p>
-        <div class="newTask">
-          <input type="text" v-model="newTodo" @keypress.enter="addTodo" placeholder="Add a todo">
+          <span>你好：{{currentUser.username}}</span>
         </div>
-        <ol class="todos">
-          <li v-for="todo in todoList">
-            <input type="checkbox" v-model="todo.done" @click="finish(todo)">{{todo.title}}
+        <div class="aside">
+          <ul class="record-list clearfix">
+              <li @click="filterAll"><i class="icon iconfont">&#xe607;</i>我的事项</li>
+              <li @click="filterTodo"><i class="icon iconfont">&#xe608;待办事项</i></li>
+              <li @click="filterdone"><i class="icon iconfont">&#xe609;已办事项</i></li>
+            </ul>
+        </div>
+        <div class="content">
+          <div class="newTask">
+            <input type="text" v-model="newTodo" @keypress.enter="addTodo" placeholder="Add a todo">
+            <span class="btn add" @click="addTodo">添加事项</span>
+            <span class="btn delete" @click="clearTodo">清空事项</span>
+          </div>
+          <ol class="todos">
+            <li v-for="todo in todoList">
+              <!-- <input type="checkbox" v-model="todo.done" @click="finish(todo)">{{todo.title}} -->
+              <span v-if="todo.done" class="btn inactive">已完成</span>
+              <span v-else class="btn active">未完成</span>
+              <input type="checkbox" v-model="todo.done"  @click="finish(todo)">{{todo.title}}
+              <span class="creatAt">创建时间:{{todo.createdAt}}</span>
 
-            <span v-if="todo.done" style="color:red">已完成</span>
-            <span v-else style="color:blue">未完成</span>
-            <span class="creatAt">创建时间:{{todo.createdAt}}</span>
-
-            <button @click="removeTodo(todo)" class="btn">删除该项</button> <!-- 👈 加了一个按钮 -->
-          </li>
-        </ol>        
+              <button @click="removeTodo(todo)" class="btn close">删除</button> 
+            </li>
+          </ol> 
+        </div>       
       </section>
 
     </div>
