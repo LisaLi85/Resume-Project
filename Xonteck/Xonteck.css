@@ -1,0 +1,144 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+body{
+	background:#484891;
+}
+ul,li{
+	list-style: none;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+center{
+	background: white;
+	width: 800px;
+	margin:0 auto;
+}
+#header{
+	width: 800px;
+	height: 80px;
+	background: #fff;
+}
+.logo{
+	float: left;
+	margin-top: 5px;
+
+}
+.logo img{
+	width: 214px;
+	height: 60px;
+	margin-top: 15px;
+}
+.wrap{
+	margin-top: 5px;
+	float: right;
+}
+.wrap .search-link>a{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+	text-decoration: none;
+}
+.search-link{
+	margin:10px 30px 20px 100px;
+}
+.search{
+	float: right;
+}
+.nav {
+    font: 14px arial;
+    margin-right: 20px;
+}
+.nav li {
+    float: left;
+    position: relative;
+}
+.nav li>a{
+	display: block;
+	text-decoration: none;
+    background: #484891;			
+    text-align: center;
+    color:#fff;
+    margin:3px;
+    padding: 2px 15px; 
+    width: 66px;
+}
+.nav a:hover {
+    background: #A6A6D2;
+}
+.nav-list .sub-nav {
+    display: none;
+    position: absolute;
+    z-index:100;
+    left: 3px;
+    top: 23px;
+    background: #484891;
+    width: 66px;
+}
+
+.nav .nav-list .sub-nav li a{
+    display:block;
+    width:66px;
+    color: #fff;
+    height: 16px;
+    margin:0;
+    border: 0;
+}
+.nav-list li:hover .sub-nav{ /*这个样式能够显示下拉菜单*/
+    display: block;
+}
+#main{
+	text-align: left;
+	font-family: Arial;
+	font-size: 16px;
+	margin-left: 10px;
+}
+#main li{
+	margin-bottom:20px;
+}
+#main .introduce{
+	font-weight: bold;
+}
+#footer p{
+	padding-bottom: 20px;
+	font-family: Arial;
+}
+.underline{
+	margin: 20px auto;
+	width: 782px;
+	border: 1px solid #2f1b72;			
+}
+.content li>img{
+	width:161px;
+	height: 395px; 
+	float: right;
+	margin-top: -400px;
+	margin-right:15px;
+}
+.content>li:nth-child(2){
+	margin-right:300px;
+}
+.content>li:nth-child(3){
+	margin-right:300px;
+}
+.content>li:nth-child(8){
+	margin-top: 35px;
+}
+.flex{
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.flex > .half {
+    width: 366px;
+}
+.flex >.half>p{
+	padding:20px 0 0 0 ;
+}		
