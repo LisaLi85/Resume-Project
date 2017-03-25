@@ -267,6 +267,8 @@
 		#vue-prj img{
 			width:350px;
 			height:250px;
+			margin-top: 10px;
+			margin-left: 75px;
 		}
 		#vue-prj .c{
 			width:950px;
@@ -276,7 +278,7 @@
 			font-size:17px;
 			padding:5px;
 			color:#eee;
-			margin-left:10px;
+			margin-left:130px;
 			background:rgb(147, 160, 17);
 		}
 
