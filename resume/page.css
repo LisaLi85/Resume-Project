@@ -1,0 +1,325 @@
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body{
+			overflow: hidden;
+			font-family: PingFangSC-Regular, "Microsoft YaHei",sans-serif;
+			background-color: #edb1b1;
+		}
+		.main{
+			width: 1200px;
+			margin: 200px auto;
+		}
+		/*.main>div{			
+			text-align: center;
+			position: relative;
+			display: table;
+			width: 100%;
+		}*/
+		#info>div ,#project>div,#skills>div{
+			text-align: center;
+		}
+		/*.main>div>div{
+			position: absolute;
+			top: 50%;
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+		}*/
+		.main>ul{
+			position: fixed;
+			right: 50px;
+		}
+		.main>ul li{
+			padding: 10px 0;
+		}
+		.main>ul li>a{
+			color: #eee;
+			border: 1px solid #eee;
+			margin-top: 30px;
+			border-radius: 100%;
+			width: 20px;
+			height: 20px;
+			display: block;
+		}
+		h1{
+			font-size: 55px;
+		    color: #fff;
+		    margin-bottom: 60px;
+		    text-align: center;
+		}
+		#info>div>h2 {
+		    font-size: 35px;
+		    margin-bottom:10px;
+		    color: #fff;
+		}
+		/*h3{
+			font-weight: 900;
+			color: #fff;
+			font-size: 50px;
+			padding: 30px 0;
+			margin-bottom: 30px;
+		}*/
+		/*h3 a{
+			color: #eee;
+			font-size: 20px;
+			background-color: #37ddc4;
+			border-radius: 5px;
+			margin-left: 10px;
+			padding: 3px;
+		}*/
+/*		.main>div>div>p{
+			color: #ddd;
+			font-size: 40px;
+		}*/
+		#info img{
+			width: 180px;
+			border-radius: 50%;
+			border: 7px solid #ccc;
+		}
+		#info h3{
+			margin-top: 15px;
+			margin-bottom: 10px;
+			font-size: 30px;
+			color: #fff;
+			padding: 0;
+		}
+		#info p{
+			color: #fff;
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
+		#info .book i,#info .github i {
+		    font-size: 24px;
+		}
+		#info .book:hover, #info .github:hover{
+			opacity: 1;
+		}
+		#info .github {
+		    background-color: #fff;
+		    color: #000;
+		    opacity: 0.5;
+		    display: inline-block;
+		    width: 40px;
+		    height: 40px;
+		    border-radius: 20px;
+		    font-size: 24px;
+		    text-align: center;
+		    line-height: 40px;
+		}
+		#info .book {
+		    background-color: rgba(158,158,158,1);
+		    color: #fff;
+		    opacity: 0.5;
+		    display: inline-block;
+		    width: 40px;
+		    height: 40px;
+		    border-radius: 20px;
+		    font-size: 24px;
+		    text-align: center;
+		    line-height: 40px;
+		}
+		.project h1,.skills h1, .tree h1{
+			text-align: center;
+			color:#fff;
+		}
+		#project span{
+		    color: #fff;
+		    font-size: 50px;
+		    border-radius: 50%;
+		    background-color: rgba(179, 103, 103, 0.5);
+		    padding: 15px;
+		    display: block;
+		    float: left;
+		    width: 50px;
+		    height: 50px;
+		    margin: 0 50px;
+		    line-height: 50px;
+		}
+
+		#project span .icon-carousel{
+			padding:6px 6px;
+			font-size:42px;
+		}
+		#project span .icon-p{
+			padding:6px 2px;
+			font-size:48px;
+		}
+		#project span .icon-tab{
+			padding:6px 3px;
+			font-size:48px;
+		}
+		#project span .icon-resume{
+			padding:6px 6px;
+			font-size:42px;
+		}
+		#project>ul{
+			width: 1200px;
+			margin:40px auto;
+		}
+		#project>ul:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		#project>ul>li{
+			float: left;
+			width: 600px;
+			text-align: left;
+			margin-bottom: 40px;
+			height: 200px;
+		}
+		#project h3{
+			margin-top: 9px;
+			margin-bottom: 9px;
+			opacity: 0.5;
+		}
+		#project a{
+			color:#000;
+		}
+		#project h3:hover{
+			opacity:1;
+		}
+		#project p{
+			font-size: 20px;
+			color:#fff;
+			padding: 3px 0;
+			width: 415px;
+			float: right;
+		}
+		.main>#skills>div>ul>li>p.lan{
+			float: left;
+			line-height: 50px;
+			color: #fff;
+			font-size: 30px;
+			width: 200px;
+			text-align: left;
+		}
+/*.main>#skills>div>ul>li>p.percent{
+	line-height: 50px;
+	color: #fff;
+	font-size: 30px;
+}*/
+		.main>#skills>div>ul>li:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.main>#skills>div>ul>li{
+			width: 1100px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+		#skills>div>ul>li>p.percentage {
+		    float: right;
+		    line-height: 50px;
+		    color: #fff;
+		    font-size: 30px;
+		    text-align: right;
+		}
+		.pannel-ct{
+			height: 50px;
+			width: 800px;
+			background-color: rgb(240, 236, 236);
+			margin: 0 auto;
+			float: left;
+		}
+		.pannel{
+			width: 600px;
+			height: 50px;
+			background-color: #333;
+		}
+		.html .pannel{
+			width: 680px;
+		}
+		.css .pannel{
+			width: 640px;
+		}
+		.js .pannel{
+			width: 590px;
+		}
+		.jq .pannel{
+			width: 620px;
+		}
+		
+		.selected{
+			background-color: #333;
+		}
+		.resume>p{
+			font-size:20px;
+			color:#fff;
+			margin-top:20px;
+		}
+		
+		#vue-prj h1{
+			text-align: center;
+			margin-bottom:50px;
+			color:#fff;
+		}
+		#vue-prj img{
+			width:350px;
+			height:250px;
+		}
+		#vue-prj .c{
+			width:950px;
+			display:flex;
+		}
+		#vue-prj a{
+			font-size:17px;
+			padding:5px;
+			color:#eee;
+			margin-left:10px;
+			background:rgb(147, 160, 17);
+		}
+
+		#vue-prj .b{
+			position: relative;
+			margin-left:50px;
+			width:500px;
+			height:250px;
+			border:1px solid black;
+		}
+		.c p{
+			position:absolute;
+			font-size:18px;
+			top:5px;
+			left:110px;
+			color:#fff;
+		}
+
+		.c .work-left{
+			width:50%;
+
+		}
+
+		.work-left .work-img{
+		    width: 350px;
+		    height: 250px;	
+		}
+
+		.c .work-right{
+			width:50%;
+			
+		}
+
+		.c .goto-show{
+			margin-top: 30px;
+			text-align:center;	
+		}
+
+		.c ul{
+			margin-left:50px;
+		}
+		.c li{
+			width:500px;
+			margin-bottom:70px;
+			position:relative;
+		}
