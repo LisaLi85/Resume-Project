@@ -14,29 +14,29 @@
 **仿站：什么值得买--2017.01-2017.02**
 - 项目描述：根据设计稿还原页面，完全按照该网页的样式制作，高精度还原。实现导航栏固定、回到顶部、轮播、选项卡等功能。
 - 所用技术：使用DIV+CSS实现页面的整体布局，里面涉及到浮动、定位、负margin、垂直居中等知识点；使用原生js实现Tab组件，实现了样式与组件逻辑分离，最大程度实现代码的可读性和复用性里面有3个小块用到；使用jQuery实现轮播组件，并且配合Tab组件一起使用；同时使用jQuery让导航条stickup；使用iconfont实现各种icon。
-- 项目地址：[github源码](https://github.com/LisaLi85/Resume-Project/tree/master/smzdm) [线上预览](https://lisali85.github.io/Resume-Project/smzdm/index.html) 
+- 项目地址：[GitHub源码](https://github.com/LisaLi85/Resume-Project/tree/master/smzdm) [线上预览](https://lisali85.github.io/Resume-Project/smzdm/index.html) 
 
 **在线简历编辑工具--2017.02-2017.03**
 - 项目描述：实现一款在线简历编辑工具。支持用户注册、登录、填写个人信息、预览、保存简历等的功能。
 - 所用技术：使用Vue-cli脚手架搭建Vue项目。使用vue.js实现数据的双向绑定，当用户填写信息时，同时信息会在预览界面进行展示；使用LeanCloud文档及其提供的API实现保存用户各项信息的功能；使用webpack进行项目的编译打包。
-- 项目地址：[github源码](https://github.com/LisaLi85/graduation-project/tree/master/resumer)  [线上预览](https://lisali85.github.io/graduation-project/resumer/dist/index.html#/) 
+- 项目地址：[GitHub源码](https://github.com/LisaLi85/graduation-project/tree/master/resumer)  [线上预览](https://lisali85.github.io/graduation-project/resumer/dist/index.html#/) 
 
 ## 其他项目经历
 **3D轮播--2017.01-2017.02**
 - 项目描述：实现一款3D旋转图片轮播效果。使用CSS3的transform属性来实现3D轮播效果。transform修改元素的变形、旋转、缩放、倾斜特性，通过rotate使元素旋转一定的度数。
-- 项目地址：[github源码](https://github.com/LisaLi85/Resume-Project/tree/master/3D-carousel)  [线上预览](https://lisali85.github.io/Resume-Project/3D-carousel/index.html) 
+- 项目地址：[GitHub源码](https://github.com/LisaLi85/Resume-Project/tree/master/3D-carousel)  [线上预览](https://lisali85.github.io/Resume-Project/3D-carousel/index.html) 
 
 **京东手机版页面--2017.01-2017.02**
 - 项目描述：还原京东手机版页面，完全按照该网页的样式制作，高精度还原。使用DIV+CSS实现页面的布局，涉及到浮动、定位等知识点；使用媒体查询实现手机查看的功能；使用懒加载优化页面，提高用户体验。
-- 项目地址：[github源码](https://github.com/LisaLi85/Resume-Project/tree/master/JD)  [线上预览](https://lisali85.github.io/Resume-Project/JD/index.html) 
+- 项目地址：[GitHub源码](https://github.com/LisaLi85/Resume-Project/tree/master/JD)  [线上预览](https://lisali85.github.io/Resume-Project/JD/index.html) 
 
 **组件库--2017.01-2017.02**
 - 项目描述：采用面向对象的方式封装代码，涉及到闭包,原型链,构造函数模式等知识点，用原生js实现Tab组件，用jQuery实现轮播组件，实现了样式与组件逻辑的分离，最大程度实现代码的可读性和复用性。
-- 项目地址：[github源码](https://github.com/LisaLi85/Resume-Project/tree/master/components)  [线上预览](https://github.com/LisaLi85/Resume-Project/tree/master/components) 
+- 项目地址：[GitHub源码](https://github.com/LisaLi85/Resume-Project/tree/master/components)  [线上预览](https://github.com/LisaLi85/Resume-Project/tree/master/components) 
 
 **待办事项表--2017.01-2017.02**
 - 项目描述：实现一款简单的待办事项列表，用户可以登录、注册以及添加、删除待办事项；使用LeanCloud文档及其提供的API实现保存用户各项信息的功能；使用webpack进行项目的编译打包。。
-- 项目地址：[github源码](https://github.com/LisaLi85/Resume-Project/tree/master/TodoList)  [线上预览](https://lisali85.github.io/Resume-Project/TodoList/page.html)
+- 项目地址：[GitHub源码](https://github.com/LisaLi85/Resume-Project/tree/master/TodoList)  [线上预览](https://lisali85.github.io/Resume-Project/TodoList/page.html)
 
 ## 擅长技术
 - HTML：掌握
