@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -52,7 +52,7 @@
                 "aqi": "57",
                 "date": "2000/6/5"
             }]*/
-                    $.get("data/aqi.json",function(aqi){
+                    $.get("/data/aqi.json",function(aqi){
 
                         var daily =  dataSplit(aqi);   
                         //按天对空气质量数据进行处理,返回格式:
@@ -250,7 +250,8 @@
                                     type: 'scatter',
                                     coordinateSystem: 'geo',
                                     data: aqiData[0],
-                                    label: {
+                                    roam:false,			// 禁止滚轮缩放	
+                                    label: {	
                                         normal: {
                                             formatter: '{b}',  //{a}、{b}、{c}，分别表示系列名，数据名，数据值
                                             position: 'left',
@@ -275,6 +276,7 @@
                                     name: 'Top 5',
                                     type: 'effectScatter',
                                     coordinateSystem: 'geo',
+                                    roam:false,			// 禁止滚轮缩放	
                                     tooltip: {
                                         formatter: function(params){
                                             return "PM2.5: "+params["value"][2];
@@ -308,6 +310,7 @@
                                     type: 'bar',
                                     xAxisIndex: 0, //使用的 x 轴的 index
                                     yAxisIndex: 0,
+                                    roam:false,		// 禁止滚轮缩放	
                                     itemStyle: {
                                         normal: {
                                             color: color[0]
@@ -318,6 +321,7 @@
                                 {
                                     zlevel: 2,
                                     type: 'line',
+                                    roam:false,		// 禁止滚轮缩放	
                                     xAxisIndex: 1, //使用的 x 轴的 index
                                     yAxisIndex: 1,
                                     data: y,
