@@ -52,7 +52,7 @@
                 "aqi": "57",
                 "date": "2000/6/5"
             }]*/
-                    $.get("/data/aqi.json",function(aqi){
+                    $.get("data/aqi.json",function(aqi){
 
                         var daily =  dataSplit(aqi);   
                         //按天对空气质量数据进行处理,返回格式:
