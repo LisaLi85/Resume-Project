@@ -162,12 +162,13 @@
                                     map: 'China',
                                     left: "50px",
                                     top: "0%",
+
                                     label: {
                                         emphasis: {
                                             show: false
                                         }
                                     },
-                                    roam: true,
+                                    roam: false,
                                     itemStyle: {
                                         normal: {
                                             color: "#663366",
@@ -250,7 +251,7 @@
                                     type: 'scatter',
                                     coordinateSystem: 'geo',
                                     data: aqiData[0],
-                                    roam:false,			// 禁止滚轮缩放	
+                                    roam: false,			// 禁止滚轮缩放	
                                     label: {	
                                         normal: {
                                             formatter: '{b}',  //{a}、{b}、{c}，分别表示系列名，数据名，数据值
@@ -276,7 +277,7 @@
                                     name: 'Top 5',
                                     type: 'effectScatter',
                                     coordinateSystem: 'geo',
-                                    roam:false,			// 禁止滚轮缩放	
+                                    roam: false,			// 禁止滚轮缩放	
                                     tooltip: {
                                         formatter: function(params){
                                             return "PM2.5: "+params["value"][2];
@@ -310,7 +311,7 @@
                                     type: 'bar',
                                     xAxisIndex: 0, //使用的 x 轴的 index
                                     yAxisIndex: 0,
-                                    roam:false,		// 禁止滚轮缩放	
+                                    roam: false,		// 禁止滚轮缩放	
                                     itemStyle: {
                                         normal: {
                                             color: color[0]
@@ -321,7 +322,7 @@
                                 {
                                     zlevel: 2,
                                     type: 'line',
-                                    roam:false,		// 禁止滚轮缩放	
+                                    roam: false,		// 禁止滚轮缩放	
                                     xAxisIndex: 1, //使用的 x 轴的 index
                                     yAxisIndex: 1,
                                     data: y,
